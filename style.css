@@ -3,24 +3,28 @@
   padding: 0;
   box-sizing: border-box;
   color: white;
+  list-style: none;
+  font-family: Arial, sans-serif;
+  text-decoration: none;
 }
 
 body {
   background-image: url("https://images.pexels.com/photos/2098428/pexels-photo-2098428.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
   background-size: cover;
   background-position-y: center;
-  height: 100vh;
+  height: 969px;
+  overflow: hidden;
 }
 
 /* a */
 .a {
-  height: 20%;
   display: flex;
+  margin-top: 7em;
+  margin-bottom: 3.5em;
 }
 
 .a h1 {
   margin: auto;
-  margin-bottom: 2em;
 }
 
 /* b */
@@ -28,6 +32,7 @@ body {
   height: 65%;
   display: flex;
   justify-content: center;
+  transition: 1s;
 }
 
 .b .box-wrapper {
@@ -38,72 +43,78 @@ body {
   cursor: pointer;
 }
 
-.b .box-wrapper .info {
+.b .box-wrapper .box {
   display: flex;
   margin: auto;
   width: 7em;
   height: 4em;
-  transition: 0.3s;
+  transition: 0.4s;
 }
 
-.box-wrapper .info .info-wrap {
+.box-wrapper .box .info {
   margin: auto;
   display: flex;
   flex-direction: column;
   text-align: center;
 }
 
-.box-wrapper .info-wrap {
-  padding-top: 12em;
+.box-wrapper .info {
+  padding-top: 14em;
 }
+
 
 .title {
   font-size: 2.5em;
 }
 
-.info-wrap p {
+.info p {
   width: 90%;
   margin: auto;
-  transition: 0.3s;
   font-size: 0.1em;
+  display: none;
 }
 
 /* hover time */
 
-.box-wrapper:hover .info {
+#fancy:hover .box {
   width: 100%;
   height: 100%;
-  border: 3px solid rgba(135, 207, 235, 0.671);
+  border: 3px solid rgba(255, 0, 0, 0.432);
   background: rgb(2,0,36);
   background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(0,0,0,0.3757878151260504) 0%, rgba(0,0,0,0) 100%, rgba(0,212,255,1) 100%, rgba(255,255,255,1) 100%);
 }
 
-.box-wrapper:hover .info-wrap p {
-  display: inline;
-  font-size: 1.1em;
+#fun:hover .box {
+  width: 100%;
+  height: 100%;
+  border: 3px solid rgba(0, 213, 255, 0.5);
+  background: rgb(2,0,36);
+  background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(0,0,0,0.3757878151260504) 0%, rgba(0,0,0,0) 100%, rgba(0,212,255,1) 100%, rgba(255,255,255,1) 100%);
 }
 
-.box-wrapper:hover .info-wrap {
-}
-
-.box-wrapper:nth-child(2):hover .info {
+#Christian:hover .box {
   width: 100%;
   height: 100%;
   border: 3px solid rgba(50, 205, 50, 0.671);
   background: rgb(2,0,36);
-  background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(0,0,0,0.3757878151260504) 0%, rgba(0,0,0,0) 100%, rgba(0,212,255,1) 100%, rgba(255,255,255,1) 100%);
+  background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(0,0,0,0.3757878151260504) 0%, rgba(0,0,0,0) 100%, rgba(255, 0, 0, 0.315) 100%, rgba(255,255,255,1) 100%);
+}
+
+.box-wrapper:hover .info p {
+  display: inline;
+  font-size: 1.1em;
 }
 
 /* end hover time */
 
-.b .box-wrapper:first-child {
+#fun {
   background-image: url("https://cdn.pixabay.com/photo/2019/04/06/06/44/astronaut-4106766_960_720.jpg");
   background-position: center;
   background-size: cover;
   border: 1px solid skyblue;
 }
 
-.b .box-wrapper:nth-child(2) {
+#Christian {
   background-image: url("https://cdn.pixabay.com/photo/2016/04/24/20/56/meditation-1350599_960_720.jpg");
   background-position: center;
   background-position-x: -4.5em;
@@ -111,8 +122,217 @@ body {
   border: 1px solid lime;
 }
 
+#fancy {
+  background-image: url("https://images.pexels.com/photos/2119106/pexels-photo-2119106.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  background-position: center;
+  background-size: cover;
+  border: 1px solid rgb(255, 0, 0);
+}
+
 
 /* c */
 .c {
-  height: 15%;
+  position: absolute;
+  bottom: 2em;
+  left: 50%;
+  margin-left: -10em;
+  width: 20em;
+  display: flex;
 }
+
+.c #first {
+  display: flex;
+  margin: auto;
+  padding-left: 0.5em;
+}
+
+.c #first li {
+  padding: 1em;
+  font-size: 1.2em;
+} 
+
+.c #first li i {
+  font-size: 1.8em;
+  position: absolute;
+  width: 1em;
+  left: 50%;
+  margin-left: -0.5em;
+  bottom: 0.4em;
+  cursor: pointer;
+}
+
+/* extra */
+.extra {
+  position: absolute;
+  border: 1px solid white;
+  left: 50%;
+  top: 12em;
+  height: 65%;
+  width: 37em;
+  margin: auto;
+  margin-left: -18.5em;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  pointer-events: none;
+  background: rgb(2,0,36);
+  background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(0,0,0,0.7231267507002801) 0%, rgba(0,0,0,0) 100%, rgba(0,212,255,1) 100%, rgba(255,255,255,1) 100%);
+}
+
+.extra img {
+  width: 35%;
+  margin: auto;
+  margin-top: 3em;
+  border-radius: 50%;
+}
+
+
+.extra-info {
+  margin: auto;
+  margin-top: -8.5em;
+  width: 35em;
+}
+
+.extra-info h1, .extra-info p {
+  padding: 0.25em;
+}
+
+/* contact */
+.contact {
+  position: absolute;
+  left: 50%;
+  text-align: center;
+  width: 24em;
+  margin-left: -12em;
+  display: none;
+  margin-top: 32em;
+  animation: movetwo;
+  animation-fill-mode: forwards;
+  animation-duration: 4s; 
+}
+
+.contact h2 {
+  width: fit-content;
+  margin: auto;
+}
+
+.contact ul {
+  display: flex;
+  padding-left: 0.25em;
+}
+
+.contact ul li {
+  padding: 2em;
+}
+
+.c:hover .contact {
+  display: inline;
+}
+
+/* ///////////////////////// */
+
+.c:hover {
+  z-index: 3;
+  height: 46.5em;
+  width: 44em;
+  margin-left: -22em;
+}
+
+.c #first {
+  margin-bottom: 0;
+}
+
+.c:hover ~ .b {
+  animation: move;
+  animation-fill-mode: forwards;
+  animation-duration: 2s; 
+}
+
+.c:hover ~ .extra{
+  border: 1px solid white;
+  border-radius: 15px;
+  animation: movetwo;
+  animation-fill-mode: forwards;
+  animation-duration: 3s;
+  pointer-events: all;
+  z-index: 2;
+}
+
+@keyframes move {
+  0% {
+    opacity: 1;
+  } 100% {
+    opacity: 0;
+  }
+
+}
+
+@keyframes movetwo {
+  0% {
+    opacity: 0;
+  } 100% {
+    opacity: 1;
+  }
+}
+
+/* MEDIA QUERIERS */
+
+/* Different monitor heights */
+@media (max-height: 950px) {
+  body {
+    height: 780px;
+  }
+
+  .a {
+    display: flex;
+    margin-top: 4em;
+    margin-bottom: 3em;
+  }
+
+  .c {
+    position: absolute;
+    bottom: 2em;
+    left: 50%;
+    margin-left: -10em;
+    width: 20em;
+    display: flex;
+  }
+
+  .extra {
+    top: 8.5em;
+  }
+
+  .contact {
+    position: absolute;
+    left: 50%;
+    text-align: center;
+    width: 24em;
+    margin-left: -12em;
+    display: none;
+    margin-top: 33em;
+    animation: movetwo;
+    animation-fill-mode: forwards;
+    animation-duration: 4s; 
+  }
+
+}
+
+  /* TABLET */
+  @media (max-width: 1280px) {
+    .b .box-wrapper {
+      margin-left: 5px;
+      margin-right: 5px;
+      display: flex;
+      width: 20%;
+      cursor: pointer;
+    }
+  }
+
+  @media (max-width: 735px) {
+    .b .box-wrapper {
+      width: 25%;
+    }
+  }
+
+
