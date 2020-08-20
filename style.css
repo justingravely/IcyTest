@@ -40,7 +40,6 @@ body {
   margin-right: 5px;
   display: flex;
   width: 12%;
-  cursor: pointer;
 }
 
 .b .box-wrapper .box {
@@ -71,7 +70,8 @@ body {
   width: 90%;
   margin: auto;
   font-size: 0.1em;
-  display: none;
+  opacity: 0;
+  transition: 0.3s;
 }
 
 /* hover time */
@@ -79,29 +79,44 @@ body {
 #fancy:hover .box {
   width: 100%;
   height: 100%;
-  border: 3px solid rgba(255, 0, 0, 0.432);
+  border: 1px solid rgba(255, 0, 0, 0.432);
   background: rgb(2,0,36);
   background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(0,0,0,0.3757878151260504) 0%, rgba(0,0,0,0) 100%, rgba(0,212,255,1) 100%, rgba(255,255,255,1) 100%);
+}
+
+#fancy:hover h2 {
+  color: red;
+  text-shadow: 3px 3px rgba(0, 0, 0, 0.356);
 }
 
 #fun:hover .box {
   width: 100%;
   height: 100%;
-  border: 3px solid rgba(0, 213, 255, 0.5);
+  border: 1px solid rgba(0, 213, 255, 0.5);
   background: rgb(2,0,36);
   background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(0,0,0,0.3757878151260504) 0%, rgba(0,0,0,0) 100%, rgba(0,212,255,1) 100%, rgba(255,255,255,1) 100%);
+}
+
+#fun:hover h2 {
+  color: skyblue;
+  text-shadow: 3px 3px rgba(0, 0, 0, 0.356);
 }
 
 #Christian:hover .box {
   width: 100%;
   height: 100%;
-  border: 3px solid rgba(50, 205, 50, 0.671);
+  border: 1px solid rgba(50, 205, 50, 0.671);
   background: rgb(2,0,36);
   background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(0,0,0,0.3757878151260504) 0%, rgba(0,0,0,0) 100%, rgba(255, 0, 0, 0.315) 100%, rgba(255,255,255,1) 100%);
 }
 
+#Christian:hover h2 {
+  color: limegreen;
+  text-shadow: 3px 3px rgba(0, 0, 0, 0.356);
+}
+
 .box-wrapper:hover .info p {
-  display: inline;
+  opacity: 1;
   font-size: 1.1em;
 }
 
@@ -111,7 +126,7 @@ body {
   background-image: url("https://cdn.pixabay.com/photo/2019/04/06/06/44/astronaut-4106766_960_720.jpg");
   background-position: center;
   background-size: cover;
-  border: 1px solid skyblue;
+  border: 1px solid rgba(135, 207, 235, 0.5);
 }
 
 #Christian {
@@ -119,14 +134,14 @@ body {
   background-position: center;
   background-position-x: -4.5em;
   background-size: cover;
-  border: 1px solid lime;
+  border: 1px solid rgba(0, 255, 0, 0.5);
 }
 
 #fancy {
   background-image: url("https://images.pexels.com/photos/2119106/pexels-photo-2119106.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
   background-position: center;
   background-size: cover;
-  border: 1px solid rgb(255, 0, 0);
+  border: 1px solid rgba(255, 0, 0, 0.5);
 }
 
 
@@ -191,7 +206,7 @@ body {
 .extra-info {
   margin: auto;
   margin-top: -8.5em;
-  width: 35em;
+  width: 33em;
 }
 
 .extra-info h1, .extra-info p {
@@ -303,6 +318,10 @@ body {
     top: 8.5em;
   }
 
+  .extra img {
+    margin-top: 1em;
+  }
+
   .contact {
     position: absolute;
     left: 50%;
@@ -332,6 +351,84 @@ body {
   @media (max-width: 735px) {
     .b .box-wrapper {
       width: 25%;
+    }
+    .extra {
+      left: 50%;
+      top: 12em;
+      height: 65%;
+      width: 30em;
+      margin-left: -15em;
+      font-size: 0.8em;
+    }
+    .extra-info {
+      margin: auto;
+      margin-top: -12em;
+      width: 25em;
+    }
+    
+    .extra-info h1, .extra-info p {
+      padding: 0.25em;
+    }
+
+    .extra-info h1 {
+      margin-bottom: 1em;
+    }
+    .c:hover {
+      width: 22em;
+      margin-left: -11em;
+    }
+
+  }
+
+  @media (max-width: 400px) {
+    .c:hover {
+      width: 14em;
+      margin-left: -7em;
+    }
+    .extra {
+      left: 50%;
+      top: 12em;
+      height: 65%;
+      width: 25em;
+      margin-left: -12.5em;
+      font-size: 0.8em;
+    }
+    .extra-info {
+      width: 22.5em;
+    }
+
+    .extra-info p {
+      padding: 0.5em;
+    }
+
+    .c {
+      bottom: 2em;
+      left: 50%;
+      margin-left: -10em;
+      width: 20em;   
+    }
+
+    .c #first {
+      padding: 0;
+    }
+
+    .contact {
+      width: 18em;
+      margin-left: -9em;
+      margin-top: 32em;
+    }
+    .contact ul li {
+      padding: 1em;
+    }
+  }
+
+  @media (max-width: 500px) {
+    .b .box-wrapper {
+      margin-left: 5px;
+      margin-right: 5px;
+      display: flex;
+      width: 30%;
+      cursor: pointer;
     }
   }
 
