@@ -12,8 +12,12 @@ body {
   background-image: url("https://images.pexels.com/photos/2098428/pexels-photo-2098428.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
   background-size: cover;
   background-position-y: center;
-  height: 969px;
-  overflow: hidden;
+  height: 850px;
+  overflow-x: hidden;
+}
+
+a:hover {
+  color: rgb(255, 230, 0);
 }
 
 /* a */
@@ -145,151 +149,28 @@ body {
 }
 
 
-/* c */
-.c {
-  position: absolute;
-  bottom: 2em;
-  left: 50%;
-  margin-left: -10em;
-  width: 20em;
+/* Footer */
+
+footer {
+  margin-top: 4em;
   display: flex;
 }
 
-.c #first {
+footer #first {
   display: flex;
-  margin: auto;
-  padding-left: 0.5em;
-}
-
-.c #first li {
-  padding: 1em;
-  font-size: 1.2em;
-} 
-
-.c #first li i {
-  font-size: 1.8em;
-  position: absolute;
-  width: 1em;
-  left: 50%;
-  margin-left: -0.5em;
-  bottom: 0.4em;
-  cursor: pointer;
-}
-
-/* extra */
-.extra {
-  position: absolute;
-  border: 1px solid white;
-  left: 50%;
-  top: 12em;
-  height: 65%;
-  width: 37em;
-  margin: auto;
-  margin-left: -18.5em;
-  opacity: 0;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  pointer-events: none;
-  background: rgb(2,0,36);
-  background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(0,0,0,0.7231267507002801) 0%, rgba(0,0,0,0) 100%, rgba(0,212,255,1) 100%, rgba(255,255,255,1) 100%);
-}
-
-.extra img {
-  width: 35%;
-  margin: auto;
-  margin-top: 3em;
-  border-radius: 50%;
-}
-
-
-.extra-info {
-  margin: auto;
-  margin-top: -8.5em;
-  width: 33em;
-}
-
-.extra-info h1, .extra-info p {
-  padding: 0.25em;
-}
-
-/* contact */
-.contact {
-  position: absolute;
-  left: 50%;
-  text-align: center;
-  width: 24em;
-  margin-left: -12em;
-  display: none;
-  margin-top: 32em;
-  animation: movetwo;
-  animation-fill-mode: forwards;
-  animation-duration: 4s; 
-}
-
-.contact h2 {
-  width: fit-content;
+  font-size: 1.3em;
   margin: auto;
 }
 
-.contact ul {
-  display: flex;
-  padding-left: 0.25em;
+#first li {
+  padding: 0.5em;
 }
 
-.contact ul li {
-  padding: 2em;
-}
 
-.c:hover .contact {
-  display: inline;
-}
 
-/* ///////////////////////// */
 
-.c:hover {
-  z-index: 3;
-  height: 46.5em;
-  width: 44em;
-  margin-left: -22em;
-}
 
-.c #first {
-  margin-bottom: 0;
-}
 
-.c:hover ~ .b {
-  animation: move;
-  animation-fill-mode: forwards;
-  animation-duration: 2s; 
-}
-
-.c:hover ~ .extra{
-  border: 1px solid white;
-  border-radius: 15px;
-  animation: movetwo;
-  animation-fill-mode: forwards;
-  animation-duration: 3s;
-  pointer-events: all;
-  z-index: 2;
-}
-
-@keyframes move {
-  0% {
-    opacity: 1;
-  } 100% {
-    opacity: 0;
-  }
-
-}
-
-@keyframes movetwo {
-  0% {
-    opacity: 0;
-  } 100% {
-    opacity: 1;
-  }
-}
 
 /* MEDIA QUERIERS */
 
@@ -303,36 +184,6 @@ body {
     display: flex;
     margin-top: 4em;
     margin-bottom: 3em;
-  }
-
-  .c {
-    position: absolute;
-    bottom: 2em;
-    left: 50%;
-    margin-left: -10em;
-    width: 20em;
-    display: flex;
-  }
-
-  .extra {
-    top: 8.5em;
-  }
-
-  .extra img {
-    margin-top: 1em;
-  }
-
-  .contact {
-    position: absolute;
-    left: 50%;
-    text-align: center;
-    width: 24em;
-    margin-left: -12em;
-    display: none;
-    margin-top: 33em;
-    animation: movetwo;
-    animation-fill-mode: forwards;
-    animation-duration: 4s; 
   }
 
 }
@@ -352,74 +203,7 @@ body {
     .b .box-wrapper {
       width: 25%;
     }
-    .extra {
-      left: 50%;
-      top: 12em;
-      height: 65%;
-      width: 30em;
-      margin-left: -15em;
-      font-size: 0.8em;
-    }
-    .extra-info {
-      margin: auto;
-      margin-top: -12em;
-      width: 25em;
-    }
-    
-    .extra-info h1, .extra-info p {
-      padding: 0.25em;
-    }
 
-    .extra-info h1 {
-      margin-bottom: 1em;
-    }
-    .c:hover {
-      width: 22em;
-      margin-left: -11em;
-    }
-
-  }
-
-  @media (max-width: 400px) {
-    .c:hover {
-      width: 14em;
-      margin-left: -7em;
-    }
-    .extra {
-      left: 50%;
-      top: 12em;
-      height: 65%;
-      width: 25em;
-      margin-left: -12.5em;
-      font-size: 0.8em;
-    }
-    .extra-info {
-      width: 22.5em;
-    }
-
-    .extra-info p {
-      padding: 0.5em;
-    }
-
-    .c {
-      bottom: 2em;
-      left: 50%;
-      margin-left: -10em;
-      width: 20em;   
-    }
-
-    .c #first {
-      padding: 0;
-    }
-
-    .contact {
-      width: 18em;
-      margin-left: -9em;
-      margin-top: 32em;
-    }
-    .contact ul li {
-      padding: 1em;
-    }
   }
 
   @media (max-width: 500px) {
